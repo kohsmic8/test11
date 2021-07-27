@@ -7,3 +7,4 @@ class profileCreationForm(ModelForm):
     class Meta:
         model = Profile
         fields = ['image', 'nickname', 'message']
+
