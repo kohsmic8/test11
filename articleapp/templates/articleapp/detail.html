@@ -26,10 +26,10 @@
        <div class="my-5">
             {#           게시글 대표 이미지, 글 내용#}
            <img src="{{ target_article.image.url }}"
-                class="artice_image"
+                class="article_image"
                 alt="">
            <div class="my-5 article_content">
-               {{ target_article.content }}
+               {{ target_article.content | safe }}
            </div>
            {% if target_article.writer == user %}
            <div>
