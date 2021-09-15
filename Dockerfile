@@ -2,11 +2,11 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'assda22sasdg'
+RUN echo 'assdadg'
 
 RUN git clone https://github.com/kohsmic8/test11.git
 
-WORKDIR /home/test11
+WORKDIR /home/test11/
 
 RUN echo "SECRET_KEY=django-insecure-m1)lj4j0*7bes1ma&t#^0y@g&c4ob4=%*&!#qinxt$b6*vkl61" > .env
 
