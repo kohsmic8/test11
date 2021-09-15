@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'assdasasdg'
+RUN echo 'assda22sasdg'
 
 RUN git clone https://github.com/kohsmic8/test11.git
 
