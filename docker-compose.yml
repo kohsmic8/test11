@@ -15,12 +15,24 @@ services:
 
 
   django:
-    image: kohsmic_django:3
+    image: kohsmic_django:4
     networks:
       - kohsmic_network
     volumes:
       - kohsmic_static:/home/test11/staticfiles/
       - kohsmic_media:/home/test11/media/
+
+  mariadb:
+    image: mariadb:10.5
+    networks:
+      - kohsmic_network
+    volumes:
+    - kohsmic_mariadb:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: 1234
+      MARIADB_DATABASE: django
+      MARIADB_USER: django
+      MARIADB_PASSWORD: 1234
 
 
 networks:
@@ -29,3 +41,4 @@ networks:
 volumes:
   kohsmic_static:
   kohsmic_media:
+  kohsmic_mariadb:
